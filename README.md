@@ -9,6 +9,13 @@ Refer to the below links for more information SharePoint cross-domain REST and P
 ](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints)
 - [SharePoint Patterns & Practises](https://github.com/pnp/pnpjs)
 
+## What does the solution include
+- Bootstrap 4 template
+- Angular 6+ 
+- Nebular
+- SharePoint PnP for the cross domain queries
+- Add-in license checks
+
 ## Build Steps:
 - Open the solution in Visual Studio
 - Click on the project file and in the properties pane change the deployment url to point to your SharePoint development site
