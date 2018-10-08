@@ -1,4 +1,5 @@
 # SharePoint Add-in Angular Starter Template
+By [Devwals](https://devwals.com)
 
 An Angular based SharePoint hosted Add-in template with some REST and PnP examples. 
 This template uses [ngx admin starter kit](https://github.com/akveo/ngx-admin/tree/starter-kit) by Akveo.
