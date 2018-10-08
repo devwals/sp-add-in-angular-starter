@@ -12345,7 +12345,7 @@ if (typeof SVGElement.prototype.contains === 'undefined') {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\src\polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

@@ -826,14 +826,14 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\typeface-exo\index.css */"./node_modules/typeface-exo/index.css");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\roboto-fontface\css\roboto\roboto-fontface.css */"./node_modules/roboto-fontface/css/roboto/roboto-fontface.css");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\ionicons\scss\ionicons.scss */"./node_modules/ionicons/scss/ionicons.scss");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\socicon\css\socicon.css */"./node_modules/socicon/css/socicon.css");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\nebular-icons\scss\nebular-icons.scss */"./node_modules/nebular-icons/scss/nebular-icons.scss");
-__webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\node_modules\pace-js\templates\pace-theme-flash.tmpl.css */"./node_modules/pace-js/templates/pace-theme-flash.tmpl.css");
-module.exports = __webpack_require__(/*! C:\Bitbucket\sp-web-admin\app\SPWebAdmin\SPWebAdmin\App\src\app\@theme\styles\styles.scss */"./src/app/@theme/styles/styles.scss");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\typeface-exo\index.css */"./node_modules/typeface-exo/index.css");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\roboto-fontface\css\roboto\roboto-fontface.css */"./node_modules/roboto-fontface/css/roboto/roboto-fontface.css");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\ionicons\scss\ionicons.scss */"./node_modules/ionicons/scss/ionicons.scss");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\socicon\css\socicon.css */"./node_modules/socicon/css/socicon.css");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\nebular-icons\scss\nebular-icons.scss */"./node_modules/nebular-icons/scss/nebular-icons.scss");
+__webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\node_modules\pace-js\templates\pace-theme-flash.tmpl.css */"./node_modules/pace-js/templates/pace-theme-flash.tmpl.css");
+module.exports = __webpack_require__(/*! C:\github\sp-add-in-angular-starter\SPAddInStarter\App\src\app\@theme\styles\styles.scss */"./src/app/@theme/styles/styles.scss");
 
 
 /***/ })

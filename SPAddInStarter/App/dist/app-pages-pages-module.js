@@ -168,7 +168,7 @@ NgxJsonViewerModule.ctorParameters = function () { return []; };
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-12\">\n    <nb-card accent=\"success\" class=\"w-100\">\n      <nb-card-header>Branding</nb-card-header>\n      <nb-card-body>\n        <button type=\"button\" class=\"btn btn-primary\" status=\"primary\" (click)=\"deployBranding()\">Deploy Branding</button>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-6\">\n    <nb-card accent=\"success\" class=\"w-100\">\n      <nb-card-header>{{view.web?.Title}} - Host Web Properties</nb-card-header>\n      <nb-card-body>\n        <ngx-json-viewer [json]=\"view.web\"></ngx-json-viewer>\n      </nb-card-body>\n    </nb-card>\n  </div>\n  <div class=\"col-md-6\">\n    <nb-card accent=\"success\" class=\"w-100\">\n      <nb-card-header>Webs ({{view.license?.type}} License)</nb-card-header>\n      <nb-card-body>\n        <ngx-json-viewer [expanded]=\"false\" [json]=\"view.webinfos\"></ngx-json-viewer>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-6\">\n    <nb-card accent=\"success\" class=\"w-100\">\n      <nb-card-header>{{view.web?.Title}} - Host Web Properties</nb-card-header>\n      <nb-card-body>\n        <ngx-json-viewer [json]=\"view.web\"></ngx-json-viewer>\n      </nb-card-body>\n    </nb-card>\n  </div>\n  <div class=\"col-md-6\">\n    <nb-card accent=\"success\" class=\"w-100\">\n      <nb-card-header>Webs ({{view.license?.type}} License)</nb-card-header>\n      <nb-card-body>\n        <ngx-json-viewer [expanded]=\"false\" [json]=\"view.webinfos\"></ngx-json-viewer>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -187,7 +187,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators_takeWhile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators/takeWhile */ "./node_modules/rxjs-compat/_esm5/operators/takeWhile.js");
 /* harmony import */ var _services_sp_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/sp.service */ "./src/app/services/sp.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _pnp_sp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @pnp/sp */ "./node_modules/@pnp/sp/dist/sp.es5.js");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -205,7 +204,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -284,32 +282,6 @@ var DashboardComponent = /** @class */ (function () {
     };
     DashboardComponent.prototype.ngOnDestroy = function () {
         this.alive = false;
-    };
-    DashboardComponent.prototype.deployBranding = function () {
-        var _this = this;
-        this.http.get(this.spService.addInWenUrl + "/_api/SP_TenantSettings_Current").subscribe(function (r) {
-            console.log(r["CorporateCatalogUrl"]);
-            _this.spService.loadSP().then(function () {
-                console.log("deployBranding SP Loaded");
-                var hostWeb = _this.spService.cdWeb();
-                var catalog = new _pnp_sp__WEBPACK_IMPORTED_MODULE_5__["AppCatalog"](hostWeb);
-                catalog.get().then(console.log);
-                //this.spService.cdWeb().getAppCatalog().get(r["CorporateCatalogUrl"]);
-                fetch(_this.spService.addInWenUrl + "/products/sp-branding-webparts.sppkg")
-                    .then(function (res) { return res.blob(); }) // Gets the response and returns it as a blob
-                    .then(function (blob) {
-                    catalog.add("sp-branding-webparts.sppkg", blob).then(function (r) {
-                        console.log("catalog.add");
-                        console.log(r.data.UniqueId);
-                        console.log(JSON.stringify(r.data, null, 4));
-                        // all file operations are available
-                        // r.file.select("Name").get().then(console.log);
-                        _this.spService.cdWeb().getAppCatalog().getAppById(r.data.UniqueId).deploy().then(console.log);
-                        // catalog.getAppById("6aeba061-45b5-4920-b8ad-b1d5779c135d").get().then(console.log)
-                    });
-                });
-            });
-        });
     };
     DashboardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -838,30 +810,18 @@ var MENU_ITEMS = [
             {
                 title: 'Groups',
                 link: '/pages/groups'
-            },
-            {
-                title: 'Web Pages',
-                link: '/pages/web-pages'
-            },
-            {
-                title: 'Apps',
-                link: '/pages/apps'
-            },
-            {
-                title: 'Services',
-                link: '/pages/services'
             }
         ]
     },
     {
         title: 'Request Feature',
         icon: 'nb-lightbulb',
-        link: '/pages/dashboard'
+        link: 'https://devwals.com/#contact'
     },
     {
         title: 'Support',
         icon: 'nb-lightbulb',
-        link: '/pages/dashboard'
+        link: 'https://devwals.com/#contact'
     }
 ];
 
